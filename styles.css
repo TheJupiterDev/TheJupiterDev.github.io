@@ -1,0 +1,230 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    z-index: 1001;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff4d4d;
+}
+
+/* Splash Screen */
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0d;
+    color: #ff4d4d;
+    font-size: 3rem;
+    z-index: 1000;
+    overflow: hidden;
+    transition: opacity 1s ease;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+}
+
+/* Matrix Canvas */
+#matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Main Content */
+body {
+    background: #1a1a1a;
+    color: #e6e6e6;
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* To prevent navbar overlap */
+    overflow-x: hidden;
+}
+
+/* Content visibility and animations */
+.content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Styling */
+section {
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #262626;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Grid Layout for Skills */
+#skills .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creating a dynamic grid */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.tile {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    color: #e6e6e6;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.tile h3 {
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.tile p {
+    font-size: 1rem;
+}
+
+/* Grid Layout for Projects */
+#projects .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Dynamic grid */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.project-tile {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    color: #e6e6e6;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.project-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.project-tile h3 {
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-tile p {
+    font-size: 1rem;
+}
+
+/* Smooth Scrolling
+html {
+    scroll-behavior: smooth;
+} */
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Centering Sections */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure that links are centered and styled appropriately */
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
