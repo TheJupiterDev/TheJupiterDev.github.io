@@ -1,2 +1,2 @@
 # TheJupiterDev.github.io
-My portfolio!
+My portfolio / personal site!
