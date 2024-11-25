@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Linux Experience - Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#skills">Skills</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Blog Content -->
+    <div class="content visible">
+        <section style="
+            padding-left: 200px;
+            padding-right: 200px;
+            " class="blog-post">
+            <h2>The Linux Experience</h2>
+            <h3>November 25, 2024</h3>
+            <br>
+            <h4>In this post, I talk about my experience with Linux so far.</h4>
+            
+            <br>
+
+            <p>I switched to Linux. Mainly because of my hate for Windows, my love for tinkering & FOSS, I decided to make the change. Initially I chose Arch as my distro, mainly so that I could unironically say "I use Arch btw." I went with the GNOME Desktop, but ended up not liking the look of it.</p>
+            <p>So, instead of just switching my desktop enviroment to something like KDE Plasma, I decided to change my distro. I considered debian, but my friend was having some major problems with debian at the time so I went for Mint. I am now running Mint, and it has worked well, mostly.</p>
+            <p>I tried to install DaVinci Resolve, as it is my video editing software of choice. Good news, it supports Linux! Bad news, it only supports `.run` files. I tried installing the app, but it had some missing dependency that wasnt supported by APT. So I converted the `.run` to a `.deb` and that worked flawlessly until I actually tried using it.</p>
+            <p>I have an AMD Gpu, and for whatever reason DaVinci decided to not detect my GPU. I insured my drivers were installed, but no luck. It turns out, DaVinci doesn't know how to install its own dependencies and I was missing `mesa-opencl-icd`, whatever that means.</p>
+            <p>The other issue I've encountered is that Cinnamon does not let you set different wallpapers for different monitors. That's fine, I've heard of this tool called Nitrogen that is supposed to make that work. But, for some reason, Nitrogen is broken with Mint 22 and seems to think I am using GNOME, when in fact I am using Cinnamon.</p>
+            <p>Other than that, now that I've gotten everything setup, I have to say, I do like Linux a lot. I'm glad I made the switch, and I don't see myself ever reverting back to Windows. Thanks for reading my rambling!</p>
+        </section>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
