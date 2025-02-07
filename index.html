@@ -3,83 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jupiter Dev Portfolio</title>
+    <title>Joel's Hiding Place</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="unnamed.jpg">
+
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li> 
+            <li><a href="#about">Home</a></li>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#projects">Programming</a></li>
         </ul>
     </nav>
     
-
-    <!-- Splash Screen with Matrix Effect -->
-    <div class="splash-screen">
-        <canvas id="matrix"></canvas>
-        <h1>Jupiter Dev</h1>
-    </div>
-
-    <!-- Main Content -->
     <div class="content">
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I’m Jupiter Dev, an asspiring (can you call it that?) software engineer!</p>
+            <p>Hello there! I’m Joel, an aspiring software engineer and author!</p>
             <p>I am 15 years old, and have been coding since I was 8. I like learning new languages & software, I even make my own sometimes.</p>
-            <p>Game Player (RPGs), Music Listener (70s Rock), Book Reader (Fantasy)</p>
+            <p>Most of my stories are set in one world, and everything I have planned links together, in some way. Nothing finished yet, though I hope to change that soon.</p>
+            <p>In my free time, I enjoy drinking coffee, writing stories, and programming!</p>
+            <br><br><br><br>
+            <h2>Novel Progress</h2>
+            <div class="progress-container">
+                <div class="progress-item">
+                    <div class="progress-title">The Assassin's First Contract - First Draft</div>
+                    <div class="progress-circle" id="progress1">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text">8%</div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-title">Shadows of Dawn</div><br>
+                    <div class="progress-circle" id="progress2">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text">25%</div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-title">The Corridor - Revisions</div><br>
+                    <div class="progress-circle" id="progress3">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text">70%</div>
+                    </div>
+                </div>
+                
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
+        <section id="stories">
+            <h2>Novels, Short Stories, and More!</h2>
             <div class="grid">
-                <div class="tile">
-                    <h3>Python</h3>
-                    <p>My language of choice. Used to create CLIs, PySide6 Applications, data analysis tools, and more.</p>
+                <div class="project-tile">
+                    <h3>The Echoverse</h3>
+                    <p>Explore a giant interconnected universe, split between two authors!</p>
+                    <a href="#" onclick="showPage('echoverse')">Read More Here!</a>
                 </div>
-                <div class="tile">
-                    <h3>Go</h3>
-                    <p>A fun language I am learning. Currently learning it by making an Interpreter.</p>
+                <div class="project-tile">
+                    <h3>The Corridor (Short Story)</h3>
+                    <p><i>Was it real? I couldn't tell.</i></p>
+                    <a href="">Coming Soon!</a>
                 </div>
-                <div class="tile">
-                    <h3>HTML</h3>
-                    <p>A "language" that I've used to make numerous websites, including this one.</p>
-                </div>
-                <div class="tile">
-                    <h3>CSS</h3>
-                    <p>Another "language" that I've used to style both websites & applications.</p>
-                </div>
-                <div class="tile">
-                    <h3>JavaScript</h3>
-                    <p>Something that tries to haunt me everytime I use it. I know enough of it to at least create this, however,</p>
-                </div>
-                <div class="tile">
-                    <h3>C#</h3>
-                    <p>I've used C# to make numerous, all be it small, games using the Unity game engine.</p>
+                <div class="project-tile">
+                    <h3>Shadows of Dawn (Short Story)</h3>
+                    <p><i>One hour. One chance. Can she do it?</i></p>
+                    <a href="">Coming Soon!</a>
                 </div>
             </div>
+        </section>
+        
+        <section id="echoverse">
+            <h2>Dravonarh</h2>
+            <p class="ltext">Dravonarh is the planet where multiple stories and series take place. The planet is earth-like, and their technology can be compared to medieval England, though in the future they will encounter rapid technological growth (planned for a future Space Opera).</p>
+            <p class="ltext">There are two main continents on the planet, with various islands scattered about. The Assassin Series takes place on the Northern Hemisphere, on the continent of <b>Arthandla.</b> On Arthandla there are a few kingdoms, the largest of which is Deadburn. There are a couple magics there, but the only known one is called Veilbinding.</p>
+            <p class="ltext">The continent on the Southern Hemisphere of Dravonarh is called <b>Stormtide</b>. The Silver King takes place here. Here, Pirates are common, and it is comparable to Vikings. There is a strong, but mostly unknown magic force on the continent, called Adons, and the only (known) entrance to The Magical Realm: The Nexus Point.</p>
+            <br>
+            <h2>Kashiet</h2>
+            <p class="ltext">Kashiet is the neighboring planet of Dravonarh, and is the world where at least one story takes place. This world is <u><b>not mine</b></u>, it belongs to my cousin, J.P.</p>
+            <br>
+            <h2>Planned Projects in the Echoverse</h2>
+            <h3 class="ltext">Stories On Dravonarh</h3>
+            <ul style="text-align: center;">
+                <li class="novel-ul">The Assassin Trilogy (Medieval Mid-Grade Fantasy)
+                    <ul>
+                        <li class="novel-ulul">The Assassin's First Contract - Book 0 (Novella)</li>
+                        <li class="novel-ulul">The Assassin's Honor - Book 1</li>
+                        <li class="novel-ulul">Unnamed - Book 2</li>
+                        <li class="novel-ulul">Unnamed - Book 3</li>
+                    </ul>
+                <li class="novel-ul">The Silver King (Mid-Grade Fantasy)</li>
+                <li class="novel-ul">The King's Court (Sci-Fi / Space Opera)</li>
+                <li class="novel-ul">If Time Halted (Sci-Fi Mystery)</li>
+                <li class="novel-ul">The Door Through Magic Saga (High Fantasy)
+                    <ul>
+                        <li class="novel-ulul">The Door Through Magic - Book One</li>
+                    </ul>
+                <li class="novel-ul">Shadows of Dawn (Short Story)</li>
+                </li>
+                </li>
+            </ul>
+            <h3 class="ltext">Stories On Kashiet</h3>
+            <ul>
+                <li class="novel-ul">Nexus (Sci-Fi Adventure)</li>
+            </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <div class="grid">
-                <div class="project-tile">
-                    <h3>mDirt</h3>
-                    <p>A Python application made using the PySide6 library. It makes it far easier to make Minecraft Datapacks, though it was mostly created so I could gain more experience.</p>
-                    <a href="https://github.com/Faith-and-Code-Technologies/mDirt-2">Check it out!</a>
-                </div>
-                <div class="project-tile">
-                    <h3>Verse of the Day</h3>
-                    <p>A different verse from the Bible, every day! Inspired by my friend posting a different verse to his TikTok each day.</p>
-                    <a href="https://thejupiterdev.github.io/Verse-of-the-Day">View the site!</a>
-                </div>
+                <div class="project-tile"><h3>mDirt</h3><p>A Python application made using the PySide6 library. It makes it far easier to make Minecraft Datapacks, though it was mostly created so I could gain more experience.</p><a href="https://github.com/Faith-and-Code-Technologies/mDirt-2">Check it out!</a></div>
+                <div class="project-tile"><h3>Verse of the Day</h3><p>A different verse from the Bible, every day! Inspired by my friend posting a different verse to his TikTok each day.</p><a href="https://thejupiterdev.github.io/Verse-of-the-Day">View the site!</a></div>
             </div>
         </section>
-    </div>
 
     <script src="script.js"></script>
 </body>
+<footer>Copyright <a href="https://thejupiterdev.github.io/" style="color: #8d8d8d;">Joel H.</a> 2025</footer>
 </html>
