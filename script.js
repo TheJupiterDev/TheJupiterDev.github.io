@@ -6,7 +6,7 @@ function setProgress(circleId, percentage) {
 window.onload = function() {
     setProgress('progress1', 8);
     setProgress('progress2', 25);
-    setProgress('progress3', 70);
+    setProgress('progress3', 100);
 }
 function showPage(pageId) {
     const sections = document.querySelectorAll(".content section");
