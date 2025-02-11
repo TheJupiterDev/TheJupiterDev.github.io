@@ -4,9 +4,8 @@ function setProgress(circleId, percentage) {
     circle.style.strokeDashoffset = offset;
 }
 window.onload = function() {
-    setProgress('progress1', 8);
-    setProgress('progress2', 25);
-    setProgress('progress3', 100);
+    setProgress('progress1', 10);
+    setProgress('progress2', 35);
 }
 function showPage(pageId) {
     const sections = document.querySelectorAll(".content section");
