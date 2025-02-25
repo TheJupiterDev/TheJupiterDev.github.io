@@ -175,5 +175,6 @@ a:hover {
 ul { list-style-type: disc; list-style-position: inside;}
 ul ul {list-style-type: none;}
 .ltext {text-align: left;}
-.novel-ul {text-align: left; font-size: medium; font-weight: bold;}
-.novel-ulul {font-weight: 500;}
+.novel-ul {font-size: medium; font-weight: bold;}
+.list-margin {padding-left: 300px;}
+.novel-ulul {font-weight: 500; padding-left: 50px;}
