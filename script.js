@@ -1,12 +1,14 @@
 function setProgress(circleId, percentage) {
     const circle = document.querySelector(`#${circleId} .progress`);
+    const text = document.querySelector(`#${circleId} .progress-text`);
     const offset = 314 - (314 * percentage / 100);
     circle.style.strokeDashoffset = offset;
+    text.textContent = `${percentage}%`;
 }
 window.onload = function() {
     setProgress('progress1', 18);
     setProgress('progress2', 35);
-    setProgress('progress3', 53);
+    setProgress('progress3', 60);
 }
 function showPage(pageId) {
     const sections = document.querySelectorAll(".content section");
