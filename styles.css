@@ -46,7 +46,7 @@ body {
     overflow-x: hidden;
 }
 
-footer { color: #9c9c9c; text-align: center; margin-top: 100px;}
+footer { color: #9c9c9c; text-align: center;}
 
 /* Content visibility and animations */
 .content {
@@ -57,7 +57,7 @@ footer { color: #9c9c9c; text-align: center; margin-top: 100px;}
 
 /* Section Styling */
 section {
-    margin: 50px auto;
+    margin: 25px auto;
     padding: 20px;
     border-radius: 8px;
     background-color: #e6e6e6;

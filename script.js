@@ -6,10 +6,14 @@ function setProgress(circleId, percentage) {
     text.textContent = `${percentage}%`;
 }
 window.onload = function() {
-    setProgress('progress1', 18);
-    setProgress('progress2', 35);
-    setProgress('progress3', 60);
-    setProgress('progress4', 33);
+    setProgress('book1', 18);
+    setProgress('book2', 35);
+    setProgress('book3', 60);
+    setProgress('book4', 33);
+
+    setProgress('code1', 10);
+    setProgress('code2', 20);
+    setProgress('code3', 5);
 }
 function showPage(pageId) {
     const sections = document.querySelectorAll(".content section");
