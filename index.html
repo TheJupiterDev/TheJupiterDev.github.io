@@ -12,6 +12,7 @@
     <nav class="navbar">
         <ul>
             <li><a href="#about">Home</a></li>
+            <li><a href="#progress-bars">Progress</a></li>
             <li><a href="#echoverse">Echoverse</a></li>
             <li><a href="#stories">Stories</a></li>
             <li><a href="#projects">Programming</a></li>
@@ -27,85 +28,7 @@
             <p>Most of my stories are set in one world, and everything I have planned links together, in some way. Nothing finished yet, though I hope to change that soon.</p>
             <p>In my free time, I enjoy drinking coffee, writing stories, and programming!</p>
             <br><br><h3>Quote of the Day</h3><p>"Home is behind, the world ahead; and there are many paths to tread." - The Return of the King by J.R.R. Tolkien</p><br><br>
-            <h2>Story Progress</h2>
-            <div class="progress-container">
-                <div class="progress-item">
-                    <div class="progress-title">The Warlord's Truth</div><br>
-                    <div class="progress-circle" id="book4">
-                        <svg>
-                            <circle class="bg" cx="60" cy="60" r="50"></circle>
-                            <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        </svg>
-                        <div class="progress-text"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-title">The Assassin's First Contract - First Draft</div>
-                    <div class="progress-circle" id="book1">
-                        <svg>
-                            <circle class="bg" cx="60" cy="60" r="50"></circle>
-                            <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        </svg>
-                        <div class="progress-text"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-title">Shadows of Dawn</div><br>
-                    <div class="progress-circle" id="book2">
-                        <svg>
-                            <circle class="bg" cx="60" cy="60" r="50"></circle>
-                            <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        </svg>
-                        <div class="progress-text"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-title">Fragmented - A Novelette</div><br>
-                    <div class="progress-circle" id="book3">
-                        <svg>
-                            <circle class="bg" cx="60" cy="60" r="50"></circle>
-                            <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        </svg>
-                        <div class="progress-text"></div>
-                    </div>
-                </div>
-                
-            </div>
-            <br><br><br>
-            <h2 style="display: none;">Programming Progress</h2>
-            <div class="progress-container" style="display: none;">
-                <div class="progress-item">
-                    <div class="progress-title">Deeper Dungeons - A Game</div>
-                    <div class="progress-circle" id="code1">
-                        <svg>
-                            <circle class="bg" cx="60" cy="60" r="50"></circle>
-                            <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        </svg>
-                        <div class="progress-text"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-title">Pocket Craft - A Game</div><br>
-                    <div class="progress-circle" id="code2">
-                        <svg>
-                            <circle class="bg" cx="60" cy="60" r="50"></circle>
-                            <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        </svg>
-                        <div class="progress-text"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-title">Shards of Elaria - A Game</div><br>
-                    <div class="progress-circle" id="code3">
-                        <svg>
-                            <circle class="bg" cx="60" cy="60" r="50"></circle>
-                            <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        </svg>
-                        <div class="progress-text"></div>
-                    </div>
-                </div>
-            </div>
-            
+            <button class="btn" onclick="showPage('progress-bars')">Check Out Novel Progress!</button>
         </section>
 
         <section id="stories">
@@ -209,6 +132,87 @@
             <p>7 in order that in the coming ages he might show the incomparable riches of his grace, expressed in his kindness to us in Christ Jesus.</p>
             <p>8 For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God— </p>
             <p>9 not by works, so that no one can boast.</p>
+        </section>
+
+        <section id="progress-bars">
+            <h2>Story Progress</h2>
+            <div class="progress-container">
+                <div class="progress-item">
+                    <div class="progress-title">The Warlord's Truth</div><br>
+                    <div class="progress-circle" id="book4">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-title">The Assassin's First Contract - First Draft</div>
+                    <div class="progress-circle" id="book1">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-title">Shadows of Dawn</div><br>
+                    <div class="progress-circle" id="book2">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-title">Fragmented - A Novelette</div><br>
+                    <div class="progress-circle" id="book3">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <br><br><br>
+            <h2>Programming Progress</h2>
+            <div class="progress-container">
+                <div class="progress-item">
+                    <div class="progress-title">Deeper Dungeons - A Game</div>
+                    <div class="progress-circle" id="code1">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-title">Pocket Craft - A Game</div><br>
+                    <div class="progress-circle" id="code2">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-title" >Shards of Elaria - A Game</div><br>
+                    <div class="progress-circle" id="code3">
+                        <svg>
+                            <circle class="bg" cx="60" cy="60" r="50"></circle>
+                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
     <script src="script.js"></script>

@@ -12,7 +12,7 @@ window.onload = function() {
     setProgress('book4', 72);
 
     setProgress('code1', 10);
-    setProgress('code2', 20);
+    setProgress('code2', 24);
     setProgress('code3', 5);
 }
 function showPage(pageId) {
