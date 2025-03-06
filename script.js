@@ -9,7 +9,7 @@ window.onload = function() {
     setProgress('book1', 18);
     setProgress('book2', 35);
     setProgress('book3', 60);
-    setProgress('book4', 55);
+    setProgress('book4', 72);
 
     setProgress('code1', 10);
     setProgress('code2', 20);
