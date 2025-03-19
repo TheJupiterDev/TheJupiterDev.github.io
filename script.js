@@ -6,7 +6,7 @@ function setProgress(circleId, percentage) {
     text.textContent = `${percentage}%`;
 }
 window.onload = function() {
-    setProgress('book1', 100);
+    setProgress('book1', 1);
     setProgress('book2', 60);
 
     setProgress('code1', 10);
