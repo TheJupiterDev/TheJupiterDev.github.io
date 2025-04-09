@@ -6,7 +6,7 @@ function setProgress(circleId, percentage) {
     text.textContent = `${percentage}%`;
 }
 window.onload = function() {
-    setProgress('book1', 3);
+    setProgress('book1', 4);
 }
 function showPage(pageId) {
     const sections = document.querySelectorAll(".content section");
