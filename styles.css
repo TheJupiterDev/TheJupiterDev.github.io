@@ -417,3 +417,33 @@ body.dark-mode #word-tracker {
   background: #2a2a2a;
   color: #85d693;
 }
+.typing-text {
+    font-size: 1.8rem;
+    color: #34723a; /* Light mode */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #34723a;
+    width: 0;
+    animation: typing 3.5s steps(30, end) forwards, blink 0.7s step-end infinite;
+    margin-bottom: 20px;
+  }
+  
+  body.dark-mode .typing-text {
+    color: #85d693;
+    border-right: 2px solid #85d693;
+  }
+  #word-tracker {
+    text-align: center;
+    margin-top: 30px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    color: #34723a;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode #word-tracker {
+    background: #2a2a2a;
+    color: #85d693;
+  }
+  
