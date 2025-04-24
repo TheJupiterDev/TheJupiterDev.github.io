@@ -6,44 +6,110 @@
     <title>Joel's Hiding Place</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="unnamed.jpg">
-
 </head>
-<body>
+<body class="dark-mode">
+
     <nav class="navbar">
         <ul>
             <li><a href="#about">Home</a></li>
-            <li><a href="#echoverse">Echoverse</a></li>
-            <li><a href="#stories">Stories</a></li>
+            <li><a href="#worlds">Worlds & Stories</a></li>
             <li><a href="#projects">Programming</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#votd">Passage of the Day</a></li>
+            <li><button id="toggle-dark" class="btn-small">🌙</button></li>
         </ul>
     </nav>
-    
+
     <div class="content">
+        <!-- About Section -->
         <section id="about">
+            <h2 class="typing-text"></h2>
+            <br>
             <h2>About Me</h2>
             <p>Why hello there! I’m Joel, an aspiring software engineer and author!</p>
             <p>I am 15 years old, and have been coding since I was 8. I like learning new languages & software, I even make my own sometimes.</p>
             <p>Most of my stories are set in one world, and everything I have planned links together, in some way. Nothing finished yet, though I hope to change that soon.</p>
             <p>In my free time, I enjoy drinking coffee, writing stories, and programming!</p>
-            <br><br><h3>Quote of the Day</h3><p>"Talenal'Elin, unarmed and without his Blade, was still the most terrifying warrior on the planet." - Wind and Truth by Brandon Saderson</p><br><br>
+            <br><br><h3>Quote of the Day</h3><p>"Talenal'Elin, unarmed and without his Blade, was still the most terrifying warrior on the planet." - Wind and Truth by Brandon Sanderson</p><br><br>
             <h2>Story Progress</h2>
             <div class="progress-container">
                 <div class="progress-item">
                     <div class="progress-title">Bloodstained Honor (1.0)</div>
                     <div class="progress-circle" id="book1">
                         <svg>
-                            <circle class="bg" cx="60" cy="60" r="50"></circle>
-                            <circle class="progress" cx="60" cy="60" r="50"></circle>
+                            <circle class="bg" cx="80" cy="80" r="70"></circle>
+                            <circle class="progress" cx="80" cy="80" r="70"></circle>
                         </svg>
                         <div class="progress-text"></div>
                     </div>
                 </div>
             </div>
+            <br>
+            <div id="word-tracker">
+                <h3>Current Project: <span id="project-name">Bloodstained Honor</span></h3>
+                <p>Words written: <span id="word-count">14,000</span> / 100,000</p>
+              </div>
+              
         </section>
 
-        <section id="stories">
-            <h2>Novels, Short Stories, and More!</h2>
+        <!-- Merged Worlds & Stories Section -->
+        <section id="worlds">
+            <h2>Worlds & Stories</h2>
+            <h2>Dravonarh</h2>
+            <p class="ltext">Dravonarh is the planet where multiple stories and series take place. The planet is earth-like, and their technology can be compared to medieval England, though in the future they will encounter rapid technological growth (planned for a future Space Opera).</p>
+            <p class="ltext">There are two main continents on the planet, with various islands scattered about. The Assassin Series takes place on the Northern Hemisphere, on the continent of <b>Arthandla.</b> On Arthandla there are a few kingdoms, the largest of which is Deadburn. There are a couple magics there, but the only known one is called Veilbinding.</p>
+            <p class="ltext">The continent on the Southern Hemisphere of Dravonarh is called <b>Stormtide</b>. The Silver King takes place here. Here, Pirates are common, and it is comparable to Vikings. There is a strong, but mostly unknown magic force on the continent, called Adons, and the only entrance to The Magical Realm on Dravonarh: The Nexus Point.</p>
+            <br>
+            <h2>Kashiet</h2>
+            <p class="ltext">Kashiet is the neighboring planet of Dravonarh, and is the world where at least one story takes place. This world is <u><b>not mine</b></u>, it belongs to my cousin, J.P.</p>
+            <br>
+            <h2>Taurenor</h2>
+            <p class="ltext">Taurenor is another planet, though it is from a seperate solar system then Dravonarh and Kashiet. Constantly ravished by strange, crimson storms, the natives have learned to create their cities in the skies, to avoid the constant floods on the ground, and they build them with large domes to protect against the storms.</p>
+            <br>
+            <h2>Planned Projects in the Echoverse</h2><br>
+
+            <details open>
+            <summary><h3>Stories On Dravonarh</h3></summary>
+            <ul class="list-margin">
+                <li class="novel-ul">The Assassin Trilogy (Dark Fantasy)
+                    <ul>
+                        <li class="novel-ulul">The Assassin's First Contract - Book 0 (Novella)</li>
+                        <li class="novel-ulul">The Assassin's Honor - Book 1</li>
+                        <li class="novel-ulul">The Assassin's Order - Book 2</li>
+                        <li class="novel-ulul">The Assassin's Journey - Book 3</li>
+                    </ul>
+                </li><br>
+                <li class="novel-ul">The Silver King (Adventure Fantasy)</li><br>
+                <li class="novel-ul">The King's Court (Sci-Fi / Space Opera)</li><br>
+                <li class="novel-ul">If Time Halted (Sci-Fi Mystery)</li><br>
+                <li class="novel-ul">The Door Through Magic Saga (Epic Fantasy)
+                    <ul>
+                        <li class="novel-ulul">The Door Through Magic - Book One</li>
+                        <li class="novel-ulul">The Door Through Magic - Book Two</li>
+                        <li class="novel-ulul">The Door Through Magic - Book Three</li>
+                        <li class="novel-ulul">The Door Through Magic - Book Four</li>
+                        <li class="novel-ulul">The Door Through Magic - Book Five</li>
+                    </ul>
+                </li><br>
+                <li class="novel-ul">Shadows of Dawn (Short Story)</li><br>
+            </ul>
+            </details>
+
+            <details>
+            <summary><h3>Stories On Kashiet</h3></summary>
+            <ul class="list-margin">
+                <li class="novel-ul">Nexus (Dystopian Sci-Fi)</li><br>
+            </ul>
+            </details>
+
+            <details>
+            <summary><h3>Stories On Taurenor</h3></summary>
+            <ul class="list-margin">
+                <li class="novel-ul">The Crimson Storm (Adventure Fantasy)</li><br>
+            </ul>
+            </details>
+
+          <h2>Novels, Short Stories, and More!</h2>
             <div class="grid">
                 <div class="project-tile">
                     <h3>The Echoverse</h3>
@@ -58,72 +124,12 @@
                 <div class="project-tile">
                     <h3>Shadows of Dawn (Short Story)</h3>
                     <p><i>One hour. One chance. Can she do it?</i></p>
-                    <a href="">Coming Soon!</a>
-                </div>
-            </div>
-        </section>
-        
-        <section id="echoverse">
-            <h2>Dravonarh</h2>
-            <p class="ltext">Dravonarh is the planet where multiple stories and series take place. The planet is earth-like, and their technology can be compared to medieval England, though in the future they will encounter rapid technological growth (planned for a future Space Opera).</p>
-            <p class="ltext">There are two main continents on the planet, with various islands scattered about. The Assassin Series takes place on the Northern Hemisphere, on the continent of <b>Arthandla.</b> On Arthandla there are a few kingdoms, the largest of which is Deadburn. There are a couple magics there, but the only known one is called Veilbinding.</p>
-            <p class="ltext">The continent on the Southern Hemisphere of Dravonarh is called <b>Stormtide</b>. The Silver King takes place here. Here, Pirates are common, and it is comparable to Vikings. There is a strong, but mostly unknown magic force on the continent, called Adons, and the only entrance to The Magical Realm on Dravonarh: The Nexus Point.</p>
-            <br>
-            <h2>Kashiet</h2>
-            <p class="ltext">Kashiet is the neighboring planet of Dravonarh, and is the world where at least one story takes place. This world is <u><b>not mine</b></u>, it belongs to my cousin, J.P.</p>
-            <br>
-            <h2>Taurenor</h2>
-            <p class="ltext">Taurenor is another planet, though it is from a seperate solar system then Dravonarh and Kashiet. Constantly ravished by strange, crimson storms, the natives have learned to create their cities in the skies, to avoid the constant floods on the ground, and they build them with large domes to protect against the storms.</p>
-            <br>
-            <h2>Planned Projects in the Echoverse</h2><br>
-            <h3>Stories On Dravonarh</h3>
-            <ul class="list-margin">
-                <li class="novel-ul">The Assassin Trilogy (Dark Fantasy)
-                    <ul>
-                        <li class="novel-ulul">The Assassin's First Contract - Book 0 (Novella)</li>
-                        <li class="novel-ulul">The Assassin's Honor - Book 1</li>
-                        <li class="novel-ulul">The Assassin's Order - Book 2</li>
-                        <li class="novel-ulul">The Assassin's Journey - Book 3</li>
-                    </ul></li><br>
-                <li class="novel-ul">The Silver King (Adventure Fantasy)</li><br>
-                <li class="novel-ul">The King's Court (Sci-Fi / Space Opera)</li><br>
-                <li class="novel-ul">If Time Halted (Sci-Fi Mystery)</li><br>
-                <li class="novel-ul">The Door Through Magic Saga (Epic Fantasy)
-                    <ul>
-                        <li class="novel-ulul">The Door Through Magic - Book One</li>
-                        <li class="novel-ulul">The Door Through Magic - Book Two</li>
-                        <li class="novel-ulul">The Door Through Magic - Book Three</li>
-                        <li class="novel-ulul">The Door Through Magic - Book Four</li>
-                        <li class="novel-ulul">The Door Through Magic - Book Five</li>
-                    </ul></li><br>
-                <li class="novel-ul">Shadows of Dawn (Short Story)</li><br>
-                
-                
-            </ul>
-            <h3>Stories On Kashiet</h3>
-            <ul class="list-margin">
-                <li class="novel-ul">Nexus (Dystopian Sci-Fi)</li><br>
-            </ul>
-            <h3>Stories on Taurenor</h3>
-            <ul class="list-margin">
-                <li class="novel-ul">The Crimson Storm (Adventure Fantasy)</li><br>
-            </ul>
-        </section>
-
-        <section id="protocol">
-            <h2>Fragmented</h2>
-            <p><i>Is it a simulation? I couldn't be sure, but as I thought more and more, that is the conclusion I leaned towards.</i></p>
-            <br>
-            <p>Nathanial Clarke is going crazy, or maybe he always has been. Either way, check out the psychological thriller now!</p>
-            <div class="grid">
-                <div class="project-tile">
-                    <h3>Fragmented</h3>
-                    <p><i>What is real? I couldn't tell.</i></p>
-                    <a href="">Coming Soon!</a>
+                    <a href="#" onclick="alert('Coming soon!')">Read More Here!</a>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
             <div class="grid">
@@ -132,21 +138,35 @@
             </div>
         </section>
 
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <h3>Welcome to My Blog</h3>
+                    <p>Hey there! I’m starting a devlog/storylog to share my journey through coding, writing, and more. Stay tuned for updates!</p>
+                    <span class="date">Posted: April 24, 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passage of the Day Section -->
         <section id="votd">
             <h2>Passage of the Day</h2>
             <p>A passage from the Bible every single day!</p>
             <br><br>
-            <h3>Romans 10:9-10</h3>
-            <p>9 because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.</p>
-            <p>10 For with the heart one believes and is justified, and with the mouth one confesses and is saved.</p>
+            <h3>Exodus 35:31-32a</h3>
+            <p>31 and he has filled him with the Spirit of God, with skill, with intelligence, with knowledge, and with all craftsmanship,</p>
+            <p>32a to devise artistic designs...</p>
         </section>
+    </div>
 
-        <section id="progress-bars">
-            
-            
-        </section>
+    <footer>
+        <p>Copyright <a href="https://thejupiterdev.github.io/" target="_blank">Joel H.</a> © 2025</p>
+        <p>Follow me: <a href="https://github.com/Faith-and-Code-Technologies">GitHub</a> | <a href="#">Instagram</a></p>
+        <p>Thanks for visiting my digital hideaway!</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-<footer>Copyright <a href="https://thejupiterdev.github.io/" style="color: #8d8d8d;">Joel H.</a> 2025</footer>
 </html>
