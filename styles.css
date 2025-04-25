@@ -1,13 +1,9 @@
-/* Cleaned-up and optimized CSS */
-
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     padding-top: 70px;
     background: #eeeeee;
@@ -22,7 +18,7 @@ body.dark-mode {
     color: #f0f0f0;
 }
 
-/* Navigation Bar */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -62,7 +58,7 @@ body.dark-mode {
     font-size: 1.2rem;
 }
 
-/* Content */
+
 .content section {
     display: none;
 }
@@ -104,13 +100,13 @@ section:hover {
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-/* Typography */
-h2, h3 {
+
+h1, h2, h3 {
     color: #34723a;
     text-align: center;
 }
 
-body.dark-mode h2, body.dark-mode h3 {
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
     color: #85d693;
 }
 
@@ -120,7 +116,7 @@ p {
     text-align: center;
 }
 
-/* Grid Layout */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -155,7 +151,7 @@ p {
     font-size: 1rem;
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -167,7 +163,7 @@ p {
     }
 }
 
-/* Links */
+
 a {
     color: #34723a;
     text-decoration: none;
@@ -177,7 +173,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Blog Section */
+
 .blog-posts {
     display: flex;
     flex-direction: column;
@@ -218,7 +214,7 @@ body.dark-mode .blog-post {
     color: #666;
 }
 
-/* Footer */
+
 footer {
     color: #9c9c9c;
     text-align: center;
@@ -234,7 +230,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Buttons */
+
 .btn {
     display: block;
     margin: auto;
@@ -254,7 +250,7 @@ footer a:hover {
     color: rgb(0, 0, 0);
 }
 
-/* Lists */
+
 ul {
     list-style-type: disc;
     list-style-position: inside;
@@ -282,7 +278,7 @@ ul ul {
     padding-left: 50px;
 }
 
-/* Expandable Sections */
+
 details {
     margin-bottom: 20px;
     background-color: #d4d4d4;
@@ -321,7 +317,7 @@ details[open] summary::after {
     transform: rotate(180deg);
 }
 
-/* Progress Circles */
+
 .progress-container {
     display: flex;
     justify-content: center;

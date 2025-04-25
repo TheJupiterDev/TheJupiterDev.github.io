@@ -14,14 +14,14 @@
             <li><a href="#about">Home</a></li>
             <li><a href="#worlds">Worlds & Stories</a></li>
             <li><a href="#projects">Programming</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <!-- <li><a href="#blog">Blog</a></li> -->
             <li><a href="#votd">Passage of the Day</a></li>
             <li><button id="toggle-dark" class="btn-small">🌙</button></li>
         </ul>
     </nav>
 
     <div class="content">
-        <!-- About Section -->
+        <!-- About Page -->
         <section id="about">
             <h2 class="typing-text"></h2>
             <br>
@@ -30,7 +30,17 @@
             <p>I am 15 years old, and have been coding since I was 8. I like learning new languages & software, I even make my own sometimes.</p>
             <p>Most of my stories are set in one world, and everything I have planned links together, in some way. Nothing finished yet, though I hope to change that soon.</p>
             <p>In my free time, I enjoy drinking coffee, writing stories, and programming!</p>
-            <br><br><h3>Quote of the Day</h3><p>"Talenal'Elin, unarmed and without his Blade, was still the most terrifying warrior on the planet." - Wind and Truth by Brandon Sanderson</p><br><br>
+            <br><br><h3>Quote of the Day</h3>
+            <p>"All that is gold does not glitter,<br>
+                Not all those who wander are lost;<br>
+                The old that is strong does not wither,<br>
+                Deep roots are not reached by the frost.<br>
+                From the ashes a fire shall be woken,<br>
+                A light from the shadows shall spring;<br>
+                Renewed shall be blade that was broken,<br>
+                The crownless again shall be king.”<br>
+                ― J.R.R. Tolkien, The Fellowship of the Ring</p>
+            <br><br>
             <h2>Story Progress</h2>
             <div class="progress-container">
                 <div class="progress-item">
@@ -45,16 +55,15 @@
                 </div>
             </div>
             <br>
-            <div id="word-tracker">
-                <h3>Current Project: <span id="project-name">Bloodstained Honor</span></h3>
-                <p>Words written: <span id="word-count">14,000</span> / 100,000</p>
-              </div>
+            
               
         </section>
 
-        <!-- Merged Worlds & Stories Section -->
+        <!-- Worlds & Stories Page -->
         <section id="worlds">
-            <h2>Worlds & Stories</h2>
+            <h2>Worlds & Stories</h2><br>
+            <p>Context: Most of my projects take place in a universe called the <b>Echoverse</b>. That being said, I do have a couple other things that <i>don't</i> take place there.</p><br>
+            <h1>Echoverse Worlds</h1><br>
             <h2>Dravonarh</h2>
             <p class="ltext">Dravonarh is the planet where multiple stories and series take place. The planet is earth-like, and their technology can be compared to medieval England, though in the future they will encounter rapid technological growth (planned for a future Space Opera).</p>
             <p class="ltext">There are two main continents on the planet, with various islands scattered about. The Echo of Honor Trilogy takes place on the Northern Hemisphere, on the continent of <b>Arthandla.</b> On Arthandla there are a few kingdoms, the largest of which is Deadburn. There are a couple magics there, but the only known one is called Veilbinding.</p>
@@ -68,7 +77,7 @@
             <br>
             <h2>Planned Projects in the Echoverse</h2><br>
 
-            <details open>
+            <details>
             <summary><h3>Stories On Dravonarh</h3></summary>
             <ul class="list-margin">
                 <li class="novel-ul">The Echo of Honor Trilogy (Fantasy)
@@ -115,62 +124,59 @@
             </ul>
             </details>
 
-          <h2>Novels, Short Stories, and More!</h2>
+          <h2>Non-Echoverse Novels, Short Stories, and More!</h2>
             <div class="grid">
-                <div class="project-tile">
-                    <h3>The Echoverse</h3>
-                    <p>Explore a giant interconnected universe, split between two authors!</p>
-                    <a href="#" onclick="showPage('echoverse')">Read More Here!</a>
-                </div>
                 <div class="project-tile">
                     <h3>Fragmented</h3>
                     <p>An intense Pshychological thriller!</p>
-                    <a href="#" onclick="showPage('protocol')">Read More Here!</a>
+                    <a href="#" onclick="alert('Coming Soon, please be patient!')">Coming Soon!</a>
                 </div>
                 <div class="project-tile">
-                    <h3>Shadows of Dawn (Short Story)</h3>
-                    <p><i>One hour. One chance. Can she do it?</i></p>
-                    <a href="#" onclick="alert('Coming soon!')">Read More Here!</a>
+                    <h3>The Sky We Left Behind</h3>
+                    <p>An anthology of the events after Earth was destroyed.</p>
+                    <a href="#" onclick="alert('Coming Soon, please be patient!')">Coming Soon!</a>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Programming Page -->
         <section id="projects">
             <h2>Projects</h2>
             <div class="grid">
                 <div class="project-tile"><h3>mDirt</h3><p>A Python application made using the PySide6 library. It makes it far easier to make Minecraft Datapacks, though it was mostly created so I could gain more experience.</p><a href="https://github.com/Faith-and-Code-Technologies/mDirt-2">Check it out!</a></div>
-                <div class="project-tile"><h3>Verse of the Day</h3><p>A different verse from the Bible, every day! Inspired by my friend posting a different verse to his TikTok each day.</p><a href="https://thejupiterdev.github.io/Verse-of-the-Day">View the site!</a></div>
+                <div class="project-tile"><h3>This Website</h3><p>Funnily enough, I made this website! Who could have thunk it!</p><a href="https://thejupiterdev.github.io/">View the site!</a></div>
             </div>
         </section>
 
-        <!-- Blog Section -->
+        <!-- Blog Page -->
         <section id="blog">
             <h2>Blog</h2>
             <div class="blog-posts">
                 <div class="blog-post">
-                    <h3>Welcome to My Blog</h3>
-                    <p>Hey there! I’m starting a devlog/storylog to share my journey through coding, writing, and more. Stay tuned for updates!</p>
-                    <span class="date">Posted: April 24, 2025</span>
+                    <h3>Nothing yet...</h3>
+                    <p>Hey there! I’m currently building a blog system so I can write little updates! Check back soon!</p>
+                    <span class="date">Posted: April 25, 2025</span>
                 </div>
             </div>
         </section>
 
-        <!-- Passage of the Day Section -->
+        <!-- Passage of the Day Page -->
         <section id="votd">
             <h2>Passage of the Day</h2>
             <p>A passage from the Bible every single day!</p>
             <br><br>
-            <h3>Exodus 35:31-32a</h3>
-            <p>31 and he has filled him with the Spirit of God, with skill, with intelligence, with knowledge, and with all craftsmanship,</p>
-            <p>32a to devise artistic designs...</p>
+            <h3>Romans 6:1-4</h3>
+            <p>1 What shall we say then? Are we to continue in sin that grace may abound?</p>
+            <p>2 By no means! How can we who died to sin still live in it?</p>
+            <p>3 Do you not know that all of us who have been baptized into Christ Jesus were baptized into his death?</p>
+            <p>4 We were buried therefore with him by baptism into death, in order that, just as Christ was raised from the dead by the glory of the Father, we too might walk in newness of life.</p>
         </section>
     </div>
 
     <footer>
         <p>Copyright <a href="https://thejupiterdev.github.io/" target="_blank">Joel H.</a> © 2025</p>
-        <p>Follow me: <a href="https://github.com/Faith-and-Code-Technologies">GitHub</a> | <a href="#">Instagram</a></p>
-        <p>Thanks for visiting my digital hideaway!</p>
+        <p>Follow me: <a href="https://github.com/thejupiterdev">GitHub</a></p>
+        <p>Thanks for visiting my creative cave!</p>
     </footer>
 
     <script src="script.js"></script>
