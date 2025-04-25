@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Joel’s Blog</title>
+  <link rel="stylesheet" href="/blog/styles.css">
+  <link rel="icon" href="/unnamed.jpg">
+</head>
+<body class="dark-mode">
+  <nav class="navbar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/#worlds">Worlds & Stories</a></li>
+      <li><a href="/#programming">Programming</a></li>
+      <li><a href="/#passage">Passage</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><button id="toggle-dark" class="btn-small">🌙</button></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <section>
+      {{ content }}
+    </section>
+  </div>
+
+  <footer>
+    <p>Copyright <a href="https://thejupiterdev.github.io" target="_blank">Joel H.</a> © 2025</p>
+    <p>Follow me: <a href="https://github.com/thejupiterdev">GitHub</a></p>
+    <p>Thanks for visiting my creative cave!</p>
+  </footer>
+
+  <script src="/blog/script.js"></script>
+</body>
+</html>
