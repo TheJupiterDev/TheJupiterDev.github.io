@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joel's Hiding Place - my little corner of the web for writing, programming, and coffee-drinking.">
     <title>Joel's Hiding Place</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="unnamed.jpg">
@@ -11,18 +12,18 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="#about">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#worlds">Worlds & Stories</a></li>
-            <li><a href="#projects">Programming</a></li>
+            <li><a href="#programming">Programming</a></li>
             <!-- <li><a href="#blog">Blog</a></li> -->
-            <li><a href="#votd">Passage of the Day</a></li>
+            <li><a href="#passage">Passage of the Day</a></li>
             <li><button id="toggle-dark" class="btn-small">🌙</button></li>
         </ul>
     </nav>
 
     <div class="content">
-        <!-- About Page -->
-        <section id="about">
+        <!-- Home Page -->
+        <section id="home">
             <h2 class="typing-text"></h2>
             <br>
             <h2>About Me</h2>
@@ -31,15 +32,7 @@
             <p>Most of my stories are set in one world, and everything I have planned links together, in some way. Nothing finished yet, though I hope to change that soon.</p>
             <p>In my free time, I enjoy drinking coffee, writing stories, and programming!</p>
             <br><br><h3>Quote of the Day</h3>
-            <p>"All that is gold does not glitter,<br>
-                Not all those who wander are lost;<br>
-                The old that is strong does not wither,<br>
-                Deep roots are not reached by the frost.<br>
-                From the ashes a fire shall be woken,<br>
-                A light from the shadows shall spring;<br>
-                Renewed shall be blade that was broken,<br>
-                The crownless again shall be king.”<br>
-                ― J.R.R. Tolkien, The Fellowship of the Ring</p>
+            <div id="quote-content"></div>
             <br><br>
             <h2>Story Progress</h2>
             <div class="progress-container">
@@ -140,7 +133,7 @@
         </section>
 
         <!-- Programming Page -->
-        <section id="projects">
+        <section id="programming">
             <h2>Projects</h2>
             <div class="grid">
                 <div class="project-tile"><h3>mDirt</h3><p>A Python application made using the PySide6 library. It makes it far easier to make Minecraft Datapacks, though it was mostly created so I could gain more experience.</p><a href="https://github.com/Faith-and-Code-Technologies/mDirt-2">Check it out!</a></div>
@@ -161,15 +154,9 @@
         </section>
 
         <!-- Passage of the Day Page -->
-        <section id="votd">
+        <section id="passage">
             <h2>Passage of the Day</h2>
-            <p>A passage from the Bible every single day!</p>
-            <br><br>
-            <h3>Romans 6:1-4</h3>
-            <p>1 What shall we say then? Are we to continue in sin that grace may abound?</p>
-            <p>2 By no means! How can we who died to sin still live in it?</p>
-            <p>3 Do you not know that all of us who have been baptized into Christ Jesus were baptized into his death?</p>
-            <p>4 We were buried therefore with him by baptism into death, in order that, just as Christ was raised from the dead by the glory of the Father, we too might walk in newness of life.</p>
+            <div id="passage-content"></div>
         </section>
     </div>
 
