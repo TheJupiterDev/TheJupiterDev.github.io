@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="icon" href="/assets/images/unnamed.jpg">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/images/unnamed.jpg' | relative_url }}">
+
 </head>
 <body class="dark-mode blog-page">
 
   <nav class="navbar">
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/#worlds">Worlds & Stories</a></li>
-      <li><a href="/#programming">Programming</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/#passage">Passage</a></li>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/#worlds' | relative_url }}">Worlds & Stories</a></li>
+      <li><a href="{{ '/#programming' | relative_url }}">Programming</a></li>
+      <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+      <li><a href="{{ '/#passage' | relative_url }}">Passage</a></li>
       <li><button id="toggle-dark" class="btn-small">🌙</button></li>
     </ul>
   </nav>
+  
 
   <section>
     <h1 style="margin-bottom: 10px;">{{ page.title }}</h1>
@@ -39,6 +41,6 @@
     <p>Thanks for visiting my creative cave!</p>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="{{ '/script.js' | relative_url }}"></script>
 </body>
 </html>
