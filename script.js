@@ -72,12 +72,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".navbar a").forEach(link => {
         link.addEventListener("click", function(event) {
-            event.preventDefault();
-            const pageId = this.getAttribute("href").substring(1);
-            showPage(pageId);
-            window.location.hash = pageId;
+            const href = this.getAttribute("href");
+            if (href.startsWith("#")) {
+                event.preventDefault();
+                const pageId = href.substring(1);
+                showPage(pageId);
+                window.location.hash = pageId;
+            }
         });
     });
+    
 
     window.addEventListener("hashchange", () => {
         const pageId = window.location.hash.substring(1);
