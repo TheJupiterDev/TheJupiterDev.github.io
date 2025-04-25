@@ -1,6 +1,7 @@
-title: Joel's Blog
-description: "My creative cave for stories, code, and coffee-drinking shenanigans!."
-baseurl: ""
+title: Joel’s Blog
+description: "Updates, thoughts, and coffee-fueled ideas."
+baseurl: "" # it's already at /blog
 url: "https://thejupiterdev.github.io"
 
-theme: minima
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
