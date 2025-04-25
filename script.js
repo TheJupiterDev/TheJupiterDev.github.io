@@ -67,7 +67,7 @@ function initTypingEffect() {
 document.addEventListener("DOMContentLoaded", () => {
     setProgress('book1', 14);
 
-    const initialPage = window.location.hash.substring(1) || "about";
+    const initialPage = window.location.hash.substring(1) || "home";
     showPage(initialPage);
 
     document.querySelectorAll(".navbar a").forEach(link => {
