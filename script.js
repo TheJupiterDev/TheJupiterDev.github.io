@@ -4,14 +4,18 @@ console.log("%cYou've found a secret.", "color: #aaa;");
 function setProgress(circleId, percentage) {
     const radius = 70;
     const circumference = 2 * Math.PI * radius;
-    const circle = document.querySelector(`#${circleId} .progress`);
-    const text = document.querySelector(`#${circleId} .progress-text`);
+    const circleContainer = document.querySelector(`#${circleId}`);
+    if (!circleContainer) return;  // <--- ADD this check
+
+    const circle = circleContainer.querySelector('.progress');
+    const text = circleContainer.querySelector('.progress-text');
     const offset = circumference - (circumference * percentage / 100);
     circle.style.strokeDasharray = circumference;
     circle.style.strokeDashoffset = offset;
     text.textContent = `${percentage}%`;
     text.style.textAlign = 'center';
 }
+
 
 function showPage(pageId) {
     const sections = document.querySelectorAll(".content section");
@@ -24,26 +28,46 @@ function showPage(pageId) {
     }
 }
 
+function loadBlogPosts(posts) {
+    const blogContainer = document.getElementById('blog-posts');
+    blogContainer.innerHTML = '';
+    posts.forEach(post => {
+        const postTile = document.createElement('div');
+        postTile.classList.add('project-tile', 'blog-post');
+
+        postTile.innerHTML = `
+            <h3><a href="${post.link}">${post.title}</a></h3>
+            <p class="date">${post.date}</p>
+            <p>${post.summary}</p>
+            <a href="${post.link}">Read more →</a>
+        `;
+        blogContainer.appendChild(postTile);
+    });
+}
+
 
 function loadDailyContent() {
-    fetch('daily.json')
+    fetch('data.json')
         .then(res => res.json())
         .then(data => {
-
+            // Load Quote of the Day
             const quoteDiv = document.getElementById('quote-content');
-            quoteDiv.innerHTML =
-                data.quote.text.map(line => `<p>${line}</p>`).join('') +
+            quoteDiv.innerHTML = data.quote.text.map(line => `<p>${line}</p>`).join('') +
                 `<p>— ${data.quote.source}</p>`;
 
-
+            // Load Passage of the Day
             const passageDiv = document.getElementById('passage-content');
             passageDiv.innerHTML = `<br><h3>${data.passage.reference}</h3>` +
                 data.passage.verses.map(v => `<p>${v}</p>`).join('');
+
+            // Load Blog Posts
+            loadBlogPosts(data.blog);
         })
         .catch(err => {
-            console.error("Failed to load daily.json", err);
+            console.error("Failed to load data.json", err);
         });
 }
+
 
 
 function initTypingEffect() {

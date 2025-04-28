@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loading...</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="dark-mode">
+
+<nav class="navbar">
+  <ul>
+      <li><a href="/#home">Home</a></li>
+      <li><a href="/#now">Now</a></li>
+      <li><a href="/#worlds">Worlds & Stories</a></li>
+      <li><a href="/#programming">Programming</a></li>
+      <li><a href="/#blog">Blog</a></li>
+      <li><a href="/#passage">Passage</a></li>
+      <li><button id="toggle-dark" class="btn-small">🌙</button></li>
+  </ul>
+</nav>
+
+<div class="content" id="blogpost-content">
+</div>
+
+<footer>
+  <p>Copyright <a href="https://thejupiterdev.github.io/" target="_blank">Joel H.</a> © 2025</p>
+  <p>Follow me: <a href="https://github.com/thejupiterdev">GitHub</a></p>
+  <p>Thanks for visiting my creative cave!</p>
+</footer>
+
+<script src="/script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const post = urlParams.get('post'); // Example: "why-i-code-and-write"
+
+    if (post) {
+        fetch(`/blog/${post}/index.html`)
+            .then(res => {
+                if (!res.ok) throw new Error("Post not found");
+                return res.text();
+            })
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const section = doc.querySelector('section');
+                if (section) {
+                    document.getElementById('blogpost-content').appendChild(section);
+                    section.style.display = 'block';
+                    document.title = section.querySelector('h1')?.textContent || "Blog Post";
+                } else {
+                    document.getElementById('blogpost-content').innerHTML = "<p>Post not found.</p>";
+                }
+            })
+            .catch(err => {
+                console.error("Failed to load post", err);
+                document.getElementById('blogpost-content').innerHTML = "<p>Failed to load post.</p>";
+            });
+    } else {
+        document.getElementById('blogpost-content').innerHTML = "<p>No post specified.</p>";
+    }
+});
+
+</script>
+
+</body>
+</html>
