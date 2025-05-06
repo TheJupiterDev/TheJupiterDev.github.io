@@ -16,10 +16,17 @@
     },
     "blog": [
         {
+            "title": "Why I Build Tools No One Asked For",
+            "date": "May 6, 2025",
+            "summary": "Building tools doesn't have to be for users, it can be just for you.",
+            "link": "/blogpost.html?post=building-tools-nobody-asked-for"
+        },
+        {
             "title": "Why I Code and Write",
             "date": "April 25, 2025",
             "summary": "On the surface, writing and coding seem totally different. But for me, they're two sides of the same creative spark.",
             "link": "/blogpost.html?post=why-i-code-and-write"
         }
     ]
+        
 }
