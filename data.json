@@ -6,26 +6,17 @@
         "source": "J.R.R. Tolkien"
     },
     "passage": {
-        "reference": "Philippians 2:5-8",
+        "reference": "Galatians 5:13",
         "verses": [
-            "5 Have this mind among yourselves, which is yours in Christ Jesus,",
-            "6 who, though he was in the form of God, did not count equality with God a thing to be grasped,",
-            "7 but emptied himself, by taking the form of a servant,[c] being born in the likeness of men.",
-            "8 And being found in human form, he humbled himself by becoming obedient to the point of death, even death on a cross."
+            "13 For you were called to freedom, brothers. Only do not use your freedom as an opportunity for the flesh, but through love serve one another."
         ]
     },
-    "blog": [
+    "tblog": [
         {
-            "title": "Why I Build Tools No One Asked For",
-            "date": "May 6, 2025",
-            "summary": "Building tools doesn't have to be for users, it can be just for you.",
-            "link": "/blogpost.html?post=building-tools-nobody-asked-for"
-        },
-        {
-            "title": "Why I Code and Write",
-            "date": "April 25, 2025",
-            "summary": "On the surface, writing and coding seem totally different. But for me, they're two sides of the same creative spark.",
-            "link": "/blogpost.html?post=why-i-code-and-write"
+            "title": "The Making of mDirt",
+            "date": "May 22, 2025",
+            "summary": "mDirt is probably my most ambitious project yet (though that isn't saying much). Learn how I built it.",
+            "link": "/blogpost.html?post=the-making-of-mdirt"
         }
     ]
         
