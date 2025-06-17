@@ -1,14 +1,22 @@
 {
     "quote": {
         "text": [
-                "If more of us valued food and cheer and song above hoarded gold, it would be a merrier world."
+                "Nothing is yet in its true form."
             ],
-        "source": "J.R.R. Tolkien"
+        "source": "C.S. Lewis"
     },
     "passage": {
-        "reference": "Galatians 5:13",
+        "reference": "1 Corinthians 15:50-58",
         "verses": [
-            "13 For you were called to freedom, brothers. Only do not use your freedom as an opportunity for the flesh, but through love serve one another."
+            "50 I tell you this, brothers: flesh and blood cannot inherit the kingdom of God, nor does the perishable inherit the imperishable.",
+            "51 Behold! I tell you a mystery. We shall not all sleep, but we shall all be changed,",
+            "52 in a moment, in the twinkling of an eye, at the last trumpet. For the trumpet will sound, and the dead will be raised imperishable, and we shall be changed.",
+            "53 For this perishable body must put on the imperishable, and this mortal body must put on immortality.",
+            "54 When the perishable puts on the imperishable, and the mortal puts on immortality, then shall come to pass the saying that is written:",
+            "55 'Death is swallowed up in victory.' 'O death, where is your victory? O death, where is your sting?'",
+            "56 The sting of death is sin, and the power of sin is the law.",
+            "57 But thanks be to God, who gives us the victory through our Lord Jesus Christ.",
+            "58 Therefore, my beloved brothers, be steadfast, immovable, always abounding in the work of the Lord, knowing that in the Lord your labor is not in vain."
         ]
     },
     "tblog": [

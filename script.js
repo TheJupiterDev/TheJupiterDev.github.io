@@ -5,7 +5,7 @@ function setProgress(circleId, percentage) {
     const radius = 70;
     const circumference = 2 * Math.PI * radius;
     const circleContainer = document.querySelector(`#${circleId}`);
-    if (!circleContainer) return;  // <--- ADD this check
+    if (!circleContainer) return;
 
     const circle = circleContainer.querySelector('.progress');
     const text = circleContainer.querySelector('.progress-text');
@@ -89,7 +89,7 @@ function initTypingEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    setProgress('book1', 22);
+    setProgress('book1', 24);
 
     const initialPage = window.location.hash.substring(1) || "home";
     showPage(initialPage);
