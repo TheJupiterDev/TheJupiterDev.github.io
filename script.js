@@ -72,8 +72,8 @@ function loadDailyContent() {
 
 function initTypingEffect() {
     const phrases = [
-        "Writer. Programmer. Reader.",
-        "Coding by day, plotting by night. Drinking coffee throughout."
+        "Writer. Programmer. Artist. Singer.",
+        "Coding. Reading. Praying. Drinking Coffee."
     ];
     const el = document.querySelector(".typing-text");
     let index = 0;
@@ -89,7 +89,7 @@ function initTypingEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    setProgress('book1', 24);
+    setProgress('book1', 26);
 
     const initialPage = window.location.hash.substring(1) || "home";
     showPage(initialPage);
