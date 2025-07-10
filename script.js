@@ -89,7 +89,7 @@ function initTypingEffect() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    setProgress('book1', 26);
+    setProgress('book1', 28);
 
     const initialPage = window.location.hash.substring(1) || "home";
     showPage(initialPage);
