@@ -13,8 +13,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    -webkit-font-smoothing: antialiased; /* Safari/Chrome */
-    -moz-osx-font-smoothing: grayscale;  /* Firefox on macOS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .main-wrapper {
@@ -58,9 +58,7 @@ h3 {
     font-family: 'Press Start 2P', monospace;
     color: #00bfff;
     text-shadow:
-        0 0 5px #00bfff,
-        0 0 10px #00bfff,
-        0 0 15px rgba(0, 191, 255, 0.5);
+        0 0 10px #00bfff;
     margin-bottom: 15px;
     letter-spacing: 2px;
 }
@@ -101,9 +99,7 @@ a:hover {
     font-size: 2.5rem;
     color: #00bfff;
     text-shadow:
-        0 0 10px #00bfff,
-        0 0 20px #00bfff,
-        0 0 30px rgba(0, 191, 255, 0.7);
+        0 0 10px #00bfff;
     margin: 0;
     letter-spacing: 4px;
 }
