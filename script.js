@@ -77,26 +77,26 @@ function initSpotifyWidget() {
       const artistText = document.getElementById("spotify-artist");
       const progressBar = document.getElementById("spotify-progress");
 
-      if (data && data.item) {
+      if (data && data.track) {
         // Update album art
         if (albumImg) {
-          albumImg.src = data.item.album.images[0]?.url || "unnamed.jpg";
-          albumImg.alt = `${data.item.album.name} by ${data.item.artists.map(a => a.name).join(", ")}`;
+          albumImg.src = data.albumArt || "default-cover.png";
+          albumImg.alt = `${data.album} by ${data.artist}`;
         }
 
         // Update track name
         if (trackText) {
-          trackText.textContent = data.item.name;
+          trackText.textContent = data.track;
         }
 
         // Update artist name
         if (artistText) {
-          artistText.textContent = data.item.artists.map(a => a.name).join(", ");
+          artistText.textContent = data.artist;
         }
 
         // Update progress bar
         if (progressBar) {
-          const progressPercent = (data.progress_ms / data.item.duration_ms) * 100;
+          const progressPercent = (data.progress_ms / data.duration_ms) * 100;
           progressBar.style.width = progressPercent + "%";
         }
       } else {
@@ -104,7 +104,7 @@ function initSpotifyWidget() {
         if (trackText) trackText.textContent = "Nothing Playing";
         if (artistText) artistText.textContent = "";
         if (albumImg) {
-          albumImg.src = "unnamed.jpg";
+          albumImg.src = "default-cover.png";
           albumImg.alt = "No music playing";
         }
         if (progressBar) progressBar.style.width = "0%";
@@ -120,7 +120,7 @@ function initSpotifyWidget() {
       if (trackText) trackText.textContent = "Unable to load";
       if (artistText) artistText.textContent = "";
       if (albumImg) {
-        albumImg.src = "unnamed.jpg";
+        albumImg.src = "default-cover.png";
         albumImg.alt = "Unable to load music";
       }
       if (progressBar) progressBar.style.width = "0%";
