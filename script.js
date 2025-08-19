@@ -144,32 +144,33 @@ function initWritingProgress() {
           projectTitleWordCount.innerHTML = projectTitleWordCount.innerHTML.replace('30,463', data.wordCount.toLocaleString());
         }
 
-        const overviewWordCount = document.querySelector('#shadow-archives-overview p:nth-of-type(2)');
+        const overviewWordCount = document.querySelector('#bloodstained-honor-overview p:nth-of-type(2)');
         if (overviewWordCount && overviewWordCount.innerHTML.includes('30,463')) {
           const progressPercent = Math.round((data.wordCount / 100000) * 100);
           overviewWordCount.innerHTML = `<strong>Progress:</strong> ${progressPercent}% complete (${data.wordCount.toLocaleString()} / 100,000 words)`;
         }
 
-        const currentChapterElement = document.querySelector('#shadow-archives-overview p:nth-of-type(6)');
-        if (currentChapterElement && currentChapterElement.innerHTML.includes('Current Chapter:')) {
-          currentChapterElement.innerHTML = `<strong>Current Chapter:</strong> Chapter ${data.chapterNum} - "${data.title}"`;
-        }
+        const allOverviewParagraphs = document.querySelectorAll('#bloodstained-honor-overview p');
+        
+        allOverviewParagraphs.forEach(p => {
+          if (p.innerHTML.includes('Progress:')) {
+            const progressPercent = Math.round((data.wordCount / 100000) * 100);
+            p.innerHTML = `<strong>Progress:</strong> ${progressPercent}% complete (${data.wordCount.toLocaleString()} / 100,000 words)`;
+          }
+          
+          if (p.innerHTML.includes('Current Chapter:')) {
+            p.innerHTML = `<strong>Current Chapter:</strong> Chapter ${data.chapterNum} - "${data.title}"`;
+          }
+          
+          if (p.innerHTML.includes('Recent Milestone:')) {
+            p.innerHTML = `<strong>Recent Milestone:</strong> Completed Chapter ${data.chapterNum - 1}, working on Chapter ${data.chapterWord} - "${data.title}".`;
+          }
+        });
 
-        const progressBar = document.querySelector('#shadow-archives-overview .progress-fill');
+        const progressBar = document.querySelector('#bloodstained-honor-overview .progress-fill');
         if (progressBar) {
           const progressPercent = Math.round((data.wordCount / 100000) * 100);
           progressBar.style.width = progressPercent + "%";
-        }
-
-        const progressText = document.querySelector('#shadow-archives-overview p:nth-of-type(2)');
-        if (progressText && progressText.innerHTML.includes('Progress:')) {
-          const progressPercent = Math.round((data.wordCount / 100000) * 100);
-          progressText.innerHTML = `<strong>Progress:</strong> ${progressPercent}% complete (${data.wordCount.toLocaleString()} / 100,000 words)`;
-        }
-
-        const milestoneElement = document.querySelector('#shadow-archives-overview p:nth-of-type(7)');
-        if (milestoneElement && milestoneElement.innerHTML.includes('Recent Milestone:')) {
-          milestoneElement.innerHTML = `<strong>Recent Milestone:</strong> Completed Chapter ${data.chapterNum - 1}, working on Chapter ${data.chapterWord} - "${data.title}".`;
         }
       }
     } catch (err) {
