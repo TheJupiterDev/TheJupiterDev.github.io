@@ -1,123 +1,64 @@
-console.log("%cWelcome, stranger from distant lands. 👀", "color: #85d693; font-size: 16px;");
-console.log("%cYou've found a secret.", "color: #aaa;");
-
-function setProgress(circleId, percentage) {
-    const radius = 70;
-    const circumference = 2 * Math.PI * radius;
-    const circleContainer = document.querySelector(`#${circleId}`);
-    if (!circleContainer) return;
-
-    const circle = circleContainer.querySelector('.progress');
-    const text = circleContainer.querySelector('.progress-text');
-    const offset = circumference - (circumference * percentage / 100);
-    circle.style.strokeDasharray = circumference;
-    circle.style.strokeDashoffset = offset;
-    text.textContent = `${percentage}%`;
-    text.style.textAlign = 'center';
-}
-
-
-function showPage(pageId) {
-    const sections = document.querySelectorAll(".content section");
-    sections.forEach(section => section.style.display = "none");
-
-    const active = document.getElementById(pageId);
-    if (active) {
-        active.style.display = "block";
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-}
-
-function loadBlogPosts(posts) {
-    const blogContainer = document.getElementById('blog-posts');
-    blogContainer.innerHTML = '';
-    posts.forEach(post => {
-        const postTile = document.createElement('div');
-        postTile.classList.add('project-tile', 'blog-post');
-
-        postTile.innerHTML = `
-            <h3><a href="${post.link}">${post.title}</a></h3>
-            <p class="date">${post.date}</p>
-            <p>${post.summary}</p>
-            <a href="${post.link}">Read more →</a>
-        `;
-        blogContainer.appendChild(postTile);
-    });
-}
-
-
-function loadDailyContent() {
-    fetch('data.json')
-        .then(res => res.json())
-        .then(data => {
-            // Load Quote of the Day
-            const quoteDiv = document.getElementById('quote-content');
-            quoteDiv.innerHTML = data.quote.text.map(line => `<p>${line}</p>`).join('') +
-                `<p>— ${data.quote.source}</p>`;
-
-            // Load Passage of the Day
-            const passageDiv = document.getElementById('passage-content');
-            passageDiv.innerHTML = `<br><h3>${data.passage.reference}</h3>` +
-                data.passage.verses.map(v => `<p>${v}</p>`).join('');
-
-            // Load Blog Posts
-            loadBlogPosts(data.blog);
-        })
-        .catch(err => {
-            console.error("Failed to load data.json", err);
-        });
-}
-
-
-
-function initTypingEffect() {
-    const phrases = [
-        "Writer. Programmer. Artist. Singer.",
-        "Coding. Reading. Praying. Drinking Coffee."
-    ];
-    const el = document.querySelector(".typing-text");
-    let index = 0;
-
-    function typeNext() {
-        el.style.width = "0";
-        el.textContent = phrases[index];
-        index = (index + 1) % phrases.length;
-    }
-
-    typeNext();
-    setInterval(typeNext, 5000);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-    setProgress('book1', 30);
+  const sections = document.querySelectorAll("section");
 
-    const initialPage = window.location.hash.substring(1) || "home";
-    showPage(initialPage);
-
-    document.querySelectorAll(".navbar a").forEach(link => {
-        link.addEventListener("click", function(event) {
-            const href = this.getAttribute("href");
-            if (href.startsWith("#")) {
-                event.preventDefault();
-                const pageId = href.substring(1);
-                showPage(pageId);
-                window.location.hash = pageId;
-            }
-        });
+  function showSection(hash) {
+    sections.forEach(sec => {
+      if (hash === "#" + sec.id || (hash === "" && sec.id === "home")) {
+        sec.style.display = "block";
+        sec.style.opacity = "0";
+        setTimeout(() => {
+          sec.style.transition = "opacity 0.3s ease";
+          sec.style.opacity = "1";
+        }, 10);
+      } else {
+        sec.style.display = "none";
+      }
     });
-    
+    updateActiveNav(hash);
+  }
 
-    window.addEventListener("hashchange", () => {
-        const pageId = window.location.hash.substring(1);
-        if (pageId) showPage(pageId);
+  showSection(window.location.hash);
+
+  window.addEventListener("hashchange", () => {
+    showSection(window.location.hash);
+  });
+
+  const projectTiles = document.querySelectorAll('.project-tile');
+  projectTiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+      tile.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        tile.style.transform = 'translateY(-3px)';
+      }, 100);
     });
-
-    const toggleButton = document.getElementById("toggle-dark");
-    toggleButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-    });
-
-    loadDailyContent();
-
-    initTypingEffect();
+  });
 });
+
+function updateActiveNav(hash) {
+  document.querySelectorAll('.navbar a').forEach(link => {
+    link.classList.remove('active');
+  });
+
+  const currentHash = hash || '#home';
+  const activeLink = document.querySelector(`.navbar a[href="${currentHash}"]`);
+  if (activeLink) {
+    activeLink.classList.add('active');
+  }
+}
+
+function toggleProject(projectId) {
+  const content = document.getElementById(projectId + '-content');
+  content.classList.toggle('active');
+}
+
+function showTab(projectId, tabName) {
+  const tabContents = document.querySelectorAll(`#${projectId}-content .tab-content`);
+  tabContents.forEach(content => content.classList.remove('active'));
+
+  const tabButtons = document.querySelectorAll(`#${projectId}-content .tab-button`);
+  tabButtons.forEach(button => button.classList.remove('active'));
+
+  document.getElementById(`${projectId}-${tabName}`).classList.add('active');
+
+  event.target.classList.add('active');
+}
