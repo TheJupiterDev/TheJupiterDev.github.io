@@ -64,6 +64,8 @@
                         <div class="progress-fill" id="spotify-progress"></div>
                     </div>
                 </div>
+                <p>This widget displays what song I am currently listening to.</p>
+                <p><em>Thanks to <a href="https://justjoshindev.github.io">Josh</a> for the idea.</em></p>
 
             </section>
 
@@ -93,12 +95,12 @@
                     <div class="project-content" id="bloodstained-honor-content">
                         <div class="content-tabs">
                             <button class="tab-button active"
-                                onclick="showTab('bloodstained-honor', 'overview')">Overview</button>
+                                onclick="showTab(event, 'bloodstained-honor', 'overview')">Overview</button>
                             <button class="tab-button"
-                                onclick="showTab('bloodstained-honor', 'characters')">Characters</button>
-                            <button class="tab-button" onclick="showTab('bloodstained-honor', 'lore')">World</button>
+                                onclick="showTab(event, 'bloodstained-honor', 'characters')">Characters</button>
+                            <button class="tab-button" onclick="showTab(event, 'bloodstained-honor', 'lore')">World</button>
                             <button class="tab-button"
-                                onclick="showTab('bloodstained-honor', 'excerpts')">Excerpts</button>
+                                onclick="showTab(event, 'bloodstained-honor', 'excerpts')">Excerpts</button>
                         </div>
 
                         <div class="tab-content active" id="bloodstained-honor-overview">
@@ -243,6 +245,9 @@
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <p><em>All word counts are pulled from my Goole Drive every 30 seconds.</em></p>
             </section>
 
             <!-- Devotional Section -->
