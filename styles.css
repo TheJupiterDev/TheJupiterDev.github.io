@@ -514,3 +514,223 @@ footer {
     border-radius: 8px;
     transition: width 0.3s ease;
 }
+
+/* Progress Timeline Styles */
+.progress-timeline {
+    max-width: 800px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.progress-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #00bfff, #87ceeb);
+    z-index: 1;
+}
+
+.progress-entry {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 60px;
+}
+
+.progress-entry::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background: #00bfff;
+    border: 3px solid #0a0a0a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    z-index: 2;
+}
+
+.progress-entry.upcoming::before {
+    background: #87ceeb;
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
+}
+
+.progress-date {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    color: #87ceeb;
+    text-shadow: 0 0 5px rgba(135, 206, 235, 0.5);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.progress-content {
+    background: linear-gradient(135deg, #111 0%, #1a1a2e 100%);
+    border: 2px solid rgba(0, 191, 255, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.1);
+    text-align: left;
+}
+
+.progress-content h3 {
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    color: #00bfff;
+}
+
+.progress-tags {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    border: 1px solid;
+}
+
+.tag.game-dev {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.tag.tool-dev {
+    background: rgba(116, 185, 255, 0.2);
+    color: #74b9ff;
+    border-color: #74b9ff;
+}
+
+.tag.web-dev {
+    background: rgba(85, 239, 196, 0.2);
+    color: #55efc4;
+    border-color: #55efc4;
+}
+
+.tag.in-progress {
+    background: rgba(255, 204, 0, 0.2);
+    color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.tag.completed {
+    background: rgba(0, 230, 118, 0.2);
+    color: #00e676;
+    border-color: #00e676;
+}
+
+.tag.milestone {
+    background: rgba(156, 39, 176, 0.2);
+    color: #9c27b0;
+    border-color: #9c27b0;
+}
+
+.tag.planning {
+    background: rgba(158, 158, 158, 0.2);
+    color: #9e9e9e;
+    border-color: #9e9e9e;
+}
+
+.feature-list {
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(0, 191, 255, 0.05);
+    border-left: 4px solid #00bfff;
+    border-radius: 0 5px 5px 0;
+}
+
+.feature {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+.demo-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(0, 191, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 191, 255, 0.2);
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.5rem;
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: #87ceeb;
+    font-size: 1rem;
+}
+
+.upcoming-list {
+    margin: 15px 0;
+}
+
+.upcoming-item {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(135, 206, 235, 0.05);
+    border-left: 3px solid #87ceeb;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.1rem;
+}
+
+.progress-entry.upcoming .progress-content {
+    border-color: rgba(135, 206, 235, 0.3);
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+}
+
+/* Mobile responsiveness for progress timeline */
+@media (max-width: 768px) {
+    .progress-timeline::before {
+        left: 15px;
+    }
+    
+    .progress-entry {
+        padding-left: 45px;
+    }
+    
+    .progress-entry::before {
+        left: 7px;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .demo-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .progress-tags {
+        gap: 5px;
+    }
+    
+    .tag {
+        font-size: 0.8rem;
+        padding: 3px 8px;
+    }
+    
+    .stat-number {
+        font-size: 1.2rem;
+    }
+}
